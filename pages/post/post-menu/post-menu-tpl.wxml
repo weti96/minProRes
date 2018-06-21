@@ -1,0 +1,29 @@
+<!--pages/post/post-foods/post-foods-tpl.wxml-->
+<import src="../post-foods/post-foods-tpl.wxml" />
+<import src="../single-menu/single-menu.wxml" />
+
+<template name="menusTpl">
+  <swiper-item class="menuTab">
+    <!-- scorll -->
+    <view class='goods'>
+      <view class='menu-wrapper'>
+        <scroll-view scroll-y="true" style='height:100%;' >
+          <block wx:for="{{menus}}" wx:for-item="items" wx:for-index="index" wx:key="*this">
+            <template is="menuItem" data="{{...items,...toView}}" />
+          </block>
+        </scroll-view>
+      </view>
+      <scroll-view scroll-y="true" scroll-into-view="{{toView.currentName}}">
+        <view wx:for="{{menus}}" wx:for-index="parentIndex" wx:for-item="items" wx:key="*this">
+          <view class='rmenu-title' id="order{{parentIndex}}">{{items.menuName}}</view>
+          <block wx:for="{{items.foods}}" wx:for-item="food" wx:key="*this">
+            <template is="foodsTpl" data="{{...food,items:items}}" />
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+     
+      
+  </swiper-item>
+
+</template>

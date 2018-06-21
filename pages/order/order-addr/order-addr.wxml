@@ -1,0 +1,22 @@
+<!--pages/order/order-addr/order-addr.wxml-->
+<view class='addrContent'>
+  <view class='contentItem'>
+    <view class='itemTxt'>姓名</view>
+    <input bindinput="bindKeyInput" data-item-id='name' placeholder="姓名" placeholder-class="input-place" />
+  </view>
+  <view class='contentItem'>
+    <view class='itemTxt'>电话</view>
+    <input bindinput="bindKeyInput" data-item-id='phone' placeholder="手机号码" placeholder-class="input-place" />
+  </view>
+  <view class='contentItem'>
+    <view class='itemTxt'>地址</view>
+    <input bindinput="bindKeyInput" data-item-id='addr' placeholder="选择收货地址" placeholder-class="input-place" />
+  </view>
+  <view class='contentItem'>
+    <view class='itemTxt'>门牌号</view>
+    <input bindinput="bindKeyInput" data-item-id='room' placeholder="例：5号楼203室" placeholder-class="input-place" />
+  </view>
+  <view class='contentBut'>
+    <button class='saveBut' bindtap='saveAddr' type="primary">保存并使用</button>
+  </view>
+</view>

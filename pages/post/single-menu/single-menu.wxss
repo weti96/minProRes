@@ -1,0 +1,20 @@
+/* left */
+
+.menu-item {
+  display: table;
+  padding: 0 24rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+
+}
+.menu-active{
+  background-color: #fff;
+  border-left: 2px solid rgba(255,99,71, 0.5);
+}
+.text {
+  font-size: 12px;
+  width: 100rpx;
+  text-align: center;
+  /* border-bottom: 1px solid rgba(7, 17, 27, 0.1); */
+
+}

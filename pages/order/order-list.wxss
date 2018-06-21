@@ -1,0 +1,119 @@
+/* pages/order/order-list.wxss */
+@import "order-item-tpl/order-item-tpl.wxss";
+@import "order-item-tpl/order-addr-tpl.wxss";
+
+page {
+  background-color: rgba(190, 190, 190, 0.2);
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.orderContent {
+}
+
+.orderItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20rpx;
+}
+
+.itemHd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50rpx;
+  width: 100%;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+
+.itemTitle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemTitle text {
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 10rpx;
+}
+
+.itemTitle image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.itemClear {
+  width: 50rpx;
+  height: 100%;
+  margin-right: 30rpx;
+}
+
+.itemClear image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.itemBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+
+.boxName {
+  font-size: 14px;
+}
+
+.boxPrices {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f00;
+}
+
+.itemTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 20rpx;
+  align-items: center;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+
+.totalSub {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.totalPrices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalPrices text {
+  font-size: 14px;
+}
+
+.totalBut[type=primary] {
+  margin: 0;
+  height: 70rpx;
+  width: 70px;
+  /* min-width: 40px; */
+  font-size: 13px;
+  line-height: 70rpx;
+  border: none;
+  border-radius: 2px;
+  margin-left: 20rpx;
+}

@@ -1,0 +1,43 @@
+<!--pages/order/order-show/order-show.wxml-->
+<!--pages/order/order-list.wxml-->
+<import src="../order-item-tpl/order-item-tpl.wxml" />
+<import src="../order-item-tpl/order-addr-tpl.wxml" />
+
+<view class='orderList'>
+  <!-- <view class='orderContent'> -->
+  <block wx:for="{{allOrderFoods}}" wx:for-item="items" wx:for-index="index" wx:key="*this">
+    <view class='orderItem' wx:if="{{items.totalNums}}">
+      <view class='itemHd'>
+        <view class='itemTitle'>
+          <text>{{items.resName}}</text>
+          <image src='/images/order/right.png'></image>
+        </view>
+        <view class='itemClear' bindtap='clearOrder' data-clear-id="{{index}}">
+          <image src='/images/post/delete@2x.png'></image>
+        </view>
+      </view>
+      <view catchtap='listDetail' data-item-id="{{items}}">
+      <block wx:for="{{items.totalFoods}}" wx:for-item="items" wx:key="*this">
+        <template is="orderItem" data="{{...items}}" />
+      </block>
+      </view>
+      <view class='itemBox'>
+        <view class='boxName'>餐盒</view>
+        <view class='boxPrices'>￥1</view>
+      </view>
+      <view class='itemTotal'>
+        <view class='totalSub'>已享受满减,优惠
+          <a style="color: #f00;">0</a> 元
+        </view>
+        <view class='totalPrices'>
+          <text>合计</text>
+          <text class='boxPrices'>￥{{items.totalCrash}}</text>
+          <button class='totalBut' type="primary" bindtap='payOrder' wx:if="{{!items.pay}}">去结算</button>
+          <button class='totalBut' type="primary" style='background: rgba(193, 205, 205, 0.7);' wx:if="{{items.pay}}">已结算</button>
+        </view>
+
+      </view>
+    </view>
+  </block>
+  <!-- </view> -->
+</view>

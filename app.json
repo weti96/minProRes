@@ -1,0 +1,49 @@
+{
+  "pages": [
+    
+    "pages/post/post",
+    "pages/order/order-list",
+    "pages/post/post-comment/post-comment",
+    "pages/order/order-show/order-show",
+    "pages/post/post-detail/post-detail",
+    "pages/order/order-addr/order-addr",
+    "pages/order/order-pay/order-pay",
+    "pages/order/order-detail/order-detail",
+    "pages/setting/setting",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00BFFF",
+    "navigationBarTitleText": "小食堂",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/post/post",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index@HL.png"
+      },
+      {
+        "pagePath": "pages/order/order-show/order-show",
+        "text": "订单",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order@HL.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me@HL.png"
+      }
+    ],
+    "borderStyle": "black",
+    "selectedColor": "#1296db",
+    "color": "#333",
+    "backgroundColor": "#fff",
+    "position": "bottom"
+  }
+}

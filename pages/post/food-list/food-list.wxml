@@ -1,0 +1,35 @@
+<import src="../post-foods/food-action.wxml" />
+<template name="cart-box">
+  <!-- show or not -->
+  <view class="cart-box" wx:if="{{totalNums>0}}">
+    <view class="cart-box__overlay" bindtap="hideCart"></view>
+    <view class="cart-box__content">
+      <!-- <view class="cart-box__icon">
+        <image src="/images/post/cart-full@2x.png" class="cart-box__icon-img"></image>
+        <view wx:if="{{totalNum > 0}}" class="cart-box__icon-badge">{{totalNum}}</view>
+      </view> -->
+      <view class="cart-box__hd">
+      <view>已选商品({{totalNums}}个)</view>
+        <view>餐盒费{{totalPackingFee}}元</view>
+        <view class=" cart-box__btn-clear" bindtap="clearCart">
+          <image class="cart-box__btn-clear-img" src="/images/post/delete@2x.png"></image>清空购物车
+        </view>
+      </view>
+      <view class="cart-box__bd">
+        <view wx:for="{{totalFoods}}" wx:key="index" class="cart-box__item" wx:for-item="items">
+          <view class="cart-box__item-name">
+            {{items.dishName}}
+            <view wx:if="{{item.sub_name}}" class="text-small grey-color">+{{items.sub_name}}</view>
+          </view>
+          <view class="cart-box__item-price">
+            ¥{{items.dishPrices}}
+            <view wx:if="{{item.packing_fee > 0}}" class="text-small grey-color">餐盒费{{items.packing_fee}}元</view>
+          </view>
+          <view class="cart-box__item-btns">
+            <template is="foodActionTpl" data="{{...items}}"></template>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

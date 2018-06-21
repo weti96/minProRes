@@ -1,0 +1,80 @@
+/* align-items会影响view width  */
+.ship {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20rpx 0%;
+}
+
+.shipAddr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 191, 255, 0.8);
+  padding: 20rpx 30rpx;
+}
+
+.addrTxt {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.addrTo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.addrTo .toWhere {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  margin-right: 20rpx;
+}
+
+.addrTo image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.addrName {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.shipTimAndPay {
+  position: relative;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+  padding: 0 20rpx;
+}
+
+.TimAndPayTxt {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.TimAndPayLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.TimAndPayLeft text {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 191, 255, 0.8);
+  margin-right:10rpx; 
+}
+
+.TimAndPayLeft image {
+  width: 35rpx;
+  height: 35rpx;
+}

@@ -1,0 +1,64 @@
+/* right */
+@import "food-action.wxss";
+.rmenu-title {
+  height: 50rpx;
+  width: 100%;
+  padding-left: 30rpx;
+  /* border-left: 2px solid #d9dde1; */
+  font-size: 12px;
+  line-height: 50rpx;
+  background-color: #fbfbfb; 
+  /* background-color: #fff; */
+}
+
+.food-item {
+  display: flex;
+  position: relative;
+  margin: 30rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #d9dde1;
+}
+
+.food-icon {
+  margin: 10rpx 0 0 10rpx;
+}
+
+.food-icon image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.food-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.content-name {
+  font-weight: 500;
+  font-size: 35rpx;
+}
+
+.content-description, .content-extra {
+  font-size: 25rpx;
+  font-weight: 200;
+  margin: 10rpx 0 10rpx 0;
+}
+
+.content-extra text {
+  margin-right: 30rpx;
+}
+
+.content-count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20rpx;
+}
+
+.content-price {
+  font-size: 35rpx;
+  color: #f00;
+}
+

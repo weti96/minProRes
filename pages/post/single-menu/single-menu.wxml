@@ -1,0 +1,7 @@
+<template name="menuItem">
+  <view class="menu-item {{currentId==menuId?'menu-active':' '}}">
+    <view class='text' data-menu-id='{{menuId}}' catchtap='getFoodsItem'>
+    {{menuName}}
+    </view>
+  </view>
+</template>

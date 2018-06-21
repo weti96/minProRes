@@ -1,0 +1,76 @@
+<!--pages/order/order-detail/order-detail.wxml-->
+<import src="../order-item-tpl/order-item-tpl.wxml" />
+
+<view class='orderList'>
+  <!-- <view class='orderContent'> -->
+  <view class='orderItem'>
+    <view class='itemHd'>
+      <view class='itemTitle'>
+        <text>{{listDetail.resName}}</text>
+      </view>
+    </view>
+    <block wx:for="{{listDetail.totalFoods}}" wx:for-item="items" wx:key="*this">
+      <template is="orderItem" data="{{...items}}" />
+    </block>
+    <view class='itemBox'>
+      <view class='boxName'>餐盒</view>
+      <view class='boxPrices'>￥1</view>
+    </view>
+    <view class='itemTotal'>
+      <view class='totalSub'>已享受满减,优惠
+        <a style="color: #f00;">0</a> 元
+      </view>
+      <view class='totalPrices'>
+        <text>实付</text>
+        <text class='boxPrices'>￥{{listDetail.totalCrash}}</text>
+      </view>
+
+    </view>
+  </view>
+  <view class='orderAddr'>
+    <view class='itemHd'>
+      <view class='itemTitle'>
+        <text>配送信息</text>
+      </view>
+    </view>
+    <view class='addrDetail'>
+      <view class='addrNormal'>送达时间</view>
+      <view class='addrNormal'>尽快送达</view>
+    </view>
+    <view class='addrDetail' style='height:70rpx;'>
+      <view class='addrNormal'>收货地址</view>
+      <view class='addrContent'>
+        <view>{{listDetail.orderAddr.addr}}</view>
+        <view class='contentInfo'>
+          <view>{{listDetail.orderAddr.name}}</view>
+          <view class='infoPos'>{{listDetail.orderAddr.phone}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='addrDetail'>
+      <view class='addrNormal'>配送方式</view>
+      <view class='addrNormal'>商家配送</view>
+    </view>
+  </view>
+
+  <view class='orderAddr'>
+    <view class='itemHd'>
+      <view class='itemTitle'>
+        <text>订单信息</text>
+      </view>
+    </view>
+    <view class='addrDetail'>
+      <view class='addrNormal'>订单号</view>
+      <view class='addrNormal'>{{listDetail.orderNumber}}</view>
+    </view>
+    <view class='addrDetail'>
+      <view class='addrNormal'>支付方式</view>
+      <view class='addrNormal'>在线支付</view>
+    </view>
+    <view class='addrDetail'>
+      <view class='addrNormal'>下单时间</view>
+      <view class='addrNormal'>{{listDetail.orderTime}}</view>
+    </view>
+  </view>
+  <!-- </view> -->
+</view>

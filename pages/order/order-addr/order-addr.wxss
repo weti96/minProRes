@@ -1,0 +1,47 @@
+/* pages/order/order-addr/order-addr.wxss */
+
+page{
+  background-color: rgba(190, 190, 190, 0.2);
+}
+.addrContent{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 20rpx;
+}
+.contentItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+  padding: 20rpx 20rpx
+}
+.contentItem input{
+  width: 80%;
+}
+.input-place{
+  font-size: 12px;
+  font-weight: 300;
+}
+.itemTxt{
+  font-size: 13px;
+  font-weight: bold;
+}
+.contentBut{
+  display: flex;
+  align-items: center;
+  padding: 30rpx 20rpx;
+  background-color: rgba(190, 190, 190, 0.2);
+}
+.saveBut[type=primary] {
+  margin: 0;
+  height: 80rpx;
+  width: 100%;
+  /* min-width: 40px; */
+  font-size: 13px;
+  line-height: 80rpx;
+  border: none;
+  border-radius: 3px;
+}

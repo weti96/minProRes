@@ -1,0 +1,34 @@
+<!-- shopCart -->
+<template name="shopCart">
+  <view>
+    <view>
+      <view class='shopCart'>
+        <view class='cart-content'>
+          <view class='content-left'>
+            <view class='logo-wrapper'>
+            <!-- 判断 -->
+              <view class='logo highlight' wx:if="{{totalNums>0}}">
+                <view class='iconfont icon-gouwuche highlight' bindtap='showOrderFoods'></view>
+              </view>
+              <view class='logoLow' wx:if="{{totalNums==0}}">
+                <view class='iconfont icon-gouwuche highlight'></view>
+              </view>
+              <view class='shop-num' wx:if="{{totalNums>0}}">{{totalNums}}</view>
+            </view>
+            <view class='shop-price'>
+              <text>￥{{totalCrash}}</text>
+            </view>
+            <view class='shop-desc'>另需配送费￥1</view>
+          </view>
+          <view class='content-right shop-pay-H' wx:if="{{totalNums>0}}" >
+            <view class='shop-pay' bindtap='buildOrder'>选好了</view>
+          </view>
+          <view class='content-right shop-pay-L' wx:if="{{totalNums==0}}">
+            <view class='shop-pay'>选好了</view>
+          </view>
+        </view>
+        <!-- shopcart-list -->
+      </view>
+    </view>
+  </view>
+</template>

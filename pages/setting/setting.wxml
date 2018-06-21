@@ -1,0 +1,63 @@
+<!--pages/setting/setting.wxml-->
+<view class='setting'>
+  <view class='setContent'>
+    <view class='infoMain'>
+      <view class='infoLeft'>
+        <view class='infoAvatar'>
+          <image src='/images/setting/userAvatar.jpg'></image>
+        </view>
+        <view class='infoShow'>
+          <view class='infoName'>usnifsd</view>
+          <view class='infoNumber'>1234234243</view>
+        </view>
+      </view>
+      <view class='infoRight'>
+        <image src='/images/order/right-light.png'></image>
+      </view>
+    </view>
+    <view class='userWallet'>
+      <view class='walletItem'>
+        <view class='itemNum'>0.00元</view>
+        <view class='itemContent'>钱包</view>
+      </view>
+      <view class='walletItem'>
+        <view class='itemRed'>2个</view>
+        <view class='itemContent'>红包</view>
+      </view>
+      <view class='walletItem'>
+        <view class='itemGold'>51个</view>
+        <view class='itemContent'>金币</view>
+      </view>
+    </view>
+    <view class='infoItem'>
+      <view class='itemList' catchtap='toAddr'>
+        <image src='/images/setting/addr.png'></image>
+        <text>收货地址</text>
+      </view>
+      <view class='itemList'>
+        <image src='/images/setting/mark.png'></image>
+        <text>我的收藏</text>
+      </view>
+    </view>
+    <view class='infoItem'>
+      <view class='itemList'>
+        <image src='/images/setting/connect.png'></image>
+        <text>联系客服</text>
+      </view>
+      <view class='itemList'>
+        <image src='/images/setting/score.png'></image>
+        <text>欢迎评分</text>
+      </view>
+      <view class='itemList'>
+        <image src='/images/setting/cooperate.png'></image>
+        <text>加盟合作</text>
+      </view>
+    </view>
+
+    <view class='loginItem' bindtap='loginOut'>
+      <view class='loginOut'>
+        <text>退出登录</text>
+      </view>
+    </view>
+  </view>
+</view>

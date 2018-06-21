@@ -1,0 +1,30 @@
+<template name="shipAddrTpl">
+  <view class='ship'>
+    <view class='shipAddr' bindtap='selectAddr'>
+      <view class='addrTxt'>订单配送至</view>
+      <view class='addrTo' wx:if="{{addr}}">
+        <view class='toWhere'>{{addr}}</view>
+        <image src='/images/order/right-light.png'></image>
+      </view>
+      <view class='addrTo' wx:else>
+        <view class='toWhere'>请选择收货地址</view>
+        <image src='/images/order/right-light.png'></image>
+      </view>
+      <view class='addrName' wx:if="{{addr}}">{{name}} {{phone}}</view>
+    </view>
+    <view class='shipTimAndPay'>
+      <view class='TimAndPayTxt'>送达时间</view>
+      <view class='TimAndPayLeft'>
+        <text>尽快送达</text>
+        <image src='/images/order/right.png'></image>
+      </view>
+    </view>
+    <view class='shipTimAndPay'>
+      <view class='TimAndPayTxt'>支付方式</view>
+      <view class='TimAndPayLeft'>
+        <text>支付宝</text>
+        <image src='/images/order/right.png'></image>
+      </view>
+    </view>
+  </view>
+</template>

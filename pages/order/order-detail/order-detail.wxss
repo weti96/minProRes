@@ -1,0 +1,137 @@
+/* pages/order/order-detail/order-detail.wxss */
+/* pages/order/order-show/order-show.wxss */
+/* pages/order/order-list.wxss */
+@import "../order-item-tpl/order-item-tpl.wxss";
+@import "../order-item-tpl/order-addr-tpl.wxss";
+
+page {
+  background-color: rgba(190, 190, 190, 0.2);
+}
+
+.orderList {
+  display: flex;
+  flex-direction: column;
+  margin: 15rpx;
+}
+
+
+.orderContent {
+}
+
+.orderItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20rpx;
+}
+
+.itemHd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50rpx;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+
+.itemTitle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemTitle text {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 10rpx;
+}
+
+.itemBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+
+.boxName {
+  font-size: 14px;
+}
+
+.boxPrices {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f00;
+}
+
+.itemTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx 20rpx;
+  align-items: center;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+
+.totalSub {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.totalPrices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalPrices text {
+  font-size: 14px;
+}
+
+.orderAddr{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20rpx;
+}
+
+.addrDetail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50rpx;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+}
+.addrNormal{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  font-weight: 300;
+  margin-right: 10rpx;
+  align-items: center;
+}
+.addrContent{
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 300;
+  margin-right: 10rpx;
+  align-items: center;
+}
+.contentInfo{
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: 300;
+  margin-right: 10rpx;
+  align-items: center;
+}
+.infoPos{
+  margin-left: 10rpx;
+}

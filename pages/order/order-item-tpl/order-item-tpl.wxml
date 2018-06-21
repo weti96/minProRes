@@ -1,0 +1,14 @@
+<template name="orderItem">
+  <view class='itemContent'>
+    <view class='contentLeft'>
+      <image src='{{dishImg}}'></image>
+    </view>
+    <view class='contentRight'>
+      <view class='contentTop'>{{dishName}}</view>
+      <view class='contentBot'>
+        <view class='contentNums'>x{{dishNums}}</view>
+        <view class='contentPrices'>￥{{dishPrices}}</view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,63 @@
+<!--pages/post/post-detail/post-detail.wxml-->
+<import src="../post-menu/post-menu-tpl.wxml" />
+<import src="../food-list/food-cart.wxml" />
+<import src="../food-list/food-list.wxml" />
+<import src="../post-comment/post-comment.wxml" />
+<import src="../post-business/post-business.wxml" />
+
+<view class='shop-show'>
+  <view class='header'>
+    <view class='content-wrapper'>
+      <view class='avatar'>
+        <image src='/images/order/avatar.jpg'></image>
+      </view>
+      <view class='content'>
+        <view class='content-title'>
+          <image src='/images/order/offical.png'></image>
+          <text class='name'>{{resName}}</text>
+        </view>
+        <view class='description'>
+          <image src='/images/order/time.png'></image>
+          <text>开放时间：7:00-23:00</text>
+        </view>
+        <view class='support'>
+          <image src='/images/order/cut.png'></image>
+          <text>高校优惠:满10-2</text>
+        </view>
+      </view>
+    </view>
+    <view class='bulletin-wrapper'>
+      <image src='/images/order/bulletin.png'></image>
+      <text>"粥品香坊其烹饪粥料的秘方源于中国千年古法"</text>
+    </view>
+    <view class='background'>
+      <image src='/images/order/background.jpg'></image>
+    </view>
+  </view>
+  <!-- head -->
+
+  <view class='shop-content'>
+    <!--tab -->
+    <view class='tab-main'>
+      <view class="tab">
+        <view class="tab-item">
+          <view class="{{status==0 ? 'active':''}}" bindtap="tabChange" data-target-id="0">商品</view>
+        </view>
+        <view class="tab-item">
+          <view class="{{status==1 ? 'active':''}}" bindtap="tabChange" data-target-id="1">评论</view>
+        </view>
+        <view class="tab-item">
+          <view class="{{status==2 ? 'active':''}}" bindtap="tabChange" data-target-id="2">商家</view>
+        </view>
+      </view>
+      <!--tab -->
+      <swiper class='tab-content' current='{{status}}' bindchange='swiperChange'>
+        <template is="menusTpl" data="{{menus:menus,toView:toView,orderFoods:orderFoods,showFoodsList:showFoodsList}}"></template>
+        <template is="commentTpl" data="{{comments:comments}}"></template>
+        <template is="resDetail" data="{{resName:resName}}"></template>
+      </swiper>
+    </view>
+  </view>
+</view>
+<template is="shopCart" data="{{...orderFoods}}" />
+<template is="cart-box" wx:if="{{showFoodsList}}" data="{{...orderFoods}}" />

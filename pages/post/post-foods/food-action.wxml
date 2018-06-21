@@ -1,0 +1,14 @@
+<!-- jia-jian -->
+<template name="foodActionTpl">
+  <view class='cartControl-wrapper'>
+    <view class='cartControl'>
+      <view class='cart-dec'>
+        <view wx:if="{{dishNums>0}}" bindtap="onDecFoods" data-food-id="{{dish}}" class='iconfont icon-jian' style="color:#00A0DC;"></view>
+      </view>
+      <view wx:if="{{dishNums>0}}" class='cart-count'>{{dishNums}}</view>
+      <view class='cart-inc'>
+        <view class='iconfont icon-jia' bindtap='onAddFoods' data-food-id="{{dish}}" style="color:#00A0DC;"></view>
+      </view>
+    </view>
+  </view>
+</template>

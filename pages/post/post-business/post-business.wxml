@@ -1,0 +1,32 @@
+<!--pages/post/post-business/post-business.wxml-->
+<template name="resDetail">
+  <swiper-item>
+    <view class='business'>
+      <view class='busHd'>
+        <view class='busTitle'>
+          <text>商家信息</text>
+        </view>
+      </view>
+      <view class='busDetail'>
+        <view class='busNormal'>商家名称</view>
+        <view class='busNormal'>{{resName}}</view>
+      </view>
+      <view class='busDetail'>
+        <view class='busNormal'>商家品类</view>
+        <view class='busNormal'>简餐</view>
+      </view>
+      <view class='busDetail'>
+        <view class='busNormal'>商家地址</view>
+        <view class='busNormal'>广州*******学院</view>
+      </view>
+      <view class='busDetail'>
+        <view class='busNormal'>商家电话</view>
+        <view class='busNormal'>100890089</view>
+      </view>
+      <view class='busDetail'>
+        <view class='busNormal'>营业时间</view>
+        <view class='busNormal'>09:00-23:00</view>
+      </view>
+    </view>
+  </swiper-item>
+</template>

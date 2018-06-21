@@ -1,0 +1,182 @@
+/* pages/post/post-detail/post-detail.wxss */
+@import "../post-foods/post-foods-tpl.wxss";
+@import "../post-menu/post-menu-tpl.wxss";
+@import "../food-list/food-list.wxss";
+@import "../food-list/food-cart.wxss";
+@import "../post-comment/post-comment.wxss";
+@import "../post-business/post-business.wxss";
+
+.shop-show{
+  display: flex;
+  flex-direction: column;
+  /* ??? */
+  height: 100vh;
+}
+/* header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #fff;
+  background: rgba(7, 17, 27, 0.3);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 230rpx;
+  width: 100%;
+}
+
+.avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 40rpx 0 0 50rpx;
+  text-align: center;
+}
+
+.avatar image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 20rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 150rpx;
+  margin: 40rpx 0 0 10rpx;
+}
+
+.content-title {
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.content-title image {
+  width: 20px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.content-title text {
+  margin-left: 10rpx;
+  vertical-align: middle;
+  font-weight: 200;
+  color: #fff;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 0 0 20rpx;
+}
+
+.description text {
+  font-weight: 200rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #eee;
+}
+
+.description image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.support {
+  display: flex;
+  flex-direction: row;
+  /* 适应图片 */
+  margin: 10rpx 0 0 20rpx;
+}
+
+.support image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.support text {
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #f0f;
+  margin-left: 10rpx;
+}
+
+.bulletin-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 50rpx;
+  padding-left: 30rpx;
+  margin-top: 30rpx;
+  background: rgba(7, 17, 27, 0.5);
+}
+
+.bulletin-wrapper image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.bulletin-wrapper text {
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #ff0;
+  margin-left: 10rpx;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+}
+
+/* 230+30+40 */
+
+.background image {
+  height: 300rpx;
+}
+
+.shop-content{
+  position: relative;
+  background: #fff;
+  height: 100%;
+}
+
+/* tab */
+.tab-main{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+.tab {
+  display: flex;
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.tab-item {
+  text-align: center;
+  width: 100%;
+}
+
+.tab-item .active {
+  /* color: #f01414; */
+  margin: auto;
+  width: 80%;
+  border-bottom:2px solid rgba(0,191,255, 0.5);
+}
+.tab-content{
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  padding-top: 80rpx;
+}

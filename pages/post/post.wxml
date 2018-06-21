@@ -1,0 +1,36 @@
+<!--pages/post/post.wxml-->
+<import src="comment-item/comment-item.wxml" />
+<view class=''>
+  <swiper class='swiper' indicator-dots='true' autoplay='true' interval='3000'>
+    <swiper-item>
+      <image src="/images/post/post-4.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <view class='main-select'>
+    <block wx:for="{{postData}}" wx:for-item="items" wx:for-index="index" wx:key="*this">
+      <view catchtap='onTapToDetail' class='select-content'  data-post-id="{{items.postId}}">
+      <view class='select-data'>
+          <image src='{{items.icon}}'></image>
+          <text>{{items.title}}</text>
+      </view>
+        <view class='foodsNum' wx:if="{{subFoodsList[index].totalNums>0}}">{{subFoodsList[index].totalNums}}</view>
+      </view>
+    </block>
+  </view>
+  <view class='notice'>
+    <view class='notice_iteml'>公告：</view>
+    <swiper wx:if="{{noticeList}}" class="notice_swiper" vertical="true" autoplay="true" circular="true" interval="3000">
+      <navigator wx:for-items="{{noticeList.dataList}}" wx:key="id" url="/pages/notice/show?id={{item.id}}" open-type="navigate">
+        <swiper-item>
+          <view class="notice_itemr">{{item.title}}</view>
+        </swiper-item>
+      </navigator>
+    </swiper>
+  </view>
+  <view class='comment-main-box'>
+    <view class='comment-title'>精选评论......(共{{postData.comment.length}}条)</view>
+    <block wx:for="{{postData}}" wx:for-item="items" wx:for-index="idx" wx:key="*this">
+      <template is="commentItem" data="{{...items}}"></template>
+    </block>
+  </view>
+</view>

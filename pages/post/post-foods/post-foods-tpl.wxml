@@ -1,0 +1,25 @@
+<import src="food-action.wxml" />
+<template name="foodsTpl">
+    <view class='food-item'>
+      <view class='food-icon'>
+        <image src='{{dishImg}}'></image>
+      </view>
+      <view class='food-content'>
+        <view class='content-name'>{{dishName}}</view>
+        <view class='content-description'>{{dishDes}}</view>
+        <view class='content-extra'>
+          <text>月售：{{dishMon}}</text>
+          <text>好评：{{dishComment}}</text>
+        </view>
+        <block>
+          <view class='content-count'>
+            <view class='content-price'>
+              <text>￥{{dishPrices}}</text>
+            </view>
+            <template is="foodActionTpl" data="{{dish:dish,dishNums:dishNums}}" />
+          </view>
+        </block>
+      </view>
+    </view>
+
+</template>
