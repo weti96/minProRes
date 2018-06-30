@@ -1,7 +1,7 @@
 <!--pages/post/post-detail/post-detail.wxml-->
 <import src="../post-menu/post-menu-tpl.wxml" />
-<import src="../food-list/food-cart.wxml" />
 <import src="../food-list/food-list.wxml" />
+<import src="../food-list/food-cart.wxml" />
 <import src="../post-comment/post-comment.wxml" />
 <import src="../post-business/post-business.wxml" />
 

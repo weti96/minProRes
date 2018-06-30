@@ -1,7 +1,7 @@
 //app.js
-// var dataObj=require("data/data.js");
+var dataObj=require("data/data.js");
 //var dataObj;
-//var commentsObj = require("data/comment.js");
+var commentsObj = require("data/comment.js");
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -9,31 +9,19 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     //获取菜单数据
-    wx.request({
-      url: 'https://wx.elecye.com/start/orderApi',
-      method: 'GET',
-      dataType: 'json',
-      success: function (res) {
+
         wx.setStorage({
           key: 'postData',
-          data: res.data
+          data: dataObj.listData
         })
-      },
-      fail: function (res) {console.log('获取菜单数据失败')},
-    })
-    //获取评论数据
-    wx.request({
-      url: 'https://wx.elecye.com/start/commentApi',
-      method: 'GET',
-      dataType: 'json',
-      success: function (res) {
+
+    // //获取评论数据
+    
         wx.setStorage({
           key: 'comments',
-          data: res.data
+          data: commentsObj.comments
         })
-      },
-      fail: function (res) { console.log('获取评论数据失败') },
-    })
+   
     // // 登录
     // wx.login({
     //   success: res => {
